@@ -168,14 +168,14 @@ class Dataset(torch.utils.data.Dataset):
     def resize(self, img, height, width, centerCrop=True):
         imgh, imgw = img.shape[0:2]
 
-        if centerCrop and imgh != imgw:
+        #if centerCrop and imgh != imgw:
             # center crop
-            side = np.minimum(imgh, imgw)
-            j = (imgh - side) // 2
-            i = (imgw - side) // 2
-            img = img[j:j + side, i:i + side, ...]
+        #    side = np.minimum(imgh, imgw)
+        #    j = (imgh - side) // 2
+        #    i = (imgw - side) // 2
+        #    img = img[j:j + side, i:i + side, ...]
 
-        img = scipy.misc.imresize(img, [height, width])
+        #img = scipy.misc.imresize(img, [height, width])
 
         return img
 
